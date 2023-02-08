@@ -1,0 +1,18 @@
+//Homework 3
+//4_deductionA.logika
+
+//Prove the following sequent using natural deduction.
+//When you are finished, your file should say "Logika verified".
+a ∧ b, c ∧ d ∧ e ∧ f ⊢ f ∧ a ∧ d
+{
+    1. a ^ b                premise
+    2. a                    ^e1 1
+    3. b                    ^e2 1
+    4. c ∧ d ∧ e ∧ f        premise
+    6. c ∧ d ∧ e            ^e1 4
+    7. c ∧ d                ^e1 6
+    8. d                    ^e2 7
+    9. f                    ^e2 4
+    10. f ^ a               ^i 9 2
+    11. f ^ a ^ d           ^i 10 8
+}

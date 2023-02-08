@@ -1,0 +1,18 @@
+//Homework 3
+//5_deductionB.logika
+
+//Prove the following sequent using natural deduction.
+//When you are finished, your file should say "Logika verified".
+
+p, q ∧ s, ¬r ⊢ (r ∨ s) ∧ (¬p ∨ q ∧ ¬r)
+{
+    1. p                            premise
+    2. q ^ s                        premise
+    3. !r                           premise
+    4. q                            ^e1 2
+    5. s                            ^e2 2
+    6. r V s                        ∨i2 5
+    7. q ^ !r                       ^i 4 3
+    8. !p V q ^ !r                  Vi2 7
+    9. (r ∨ s) ∧ (¬p ∨ q ∧ ¬r)      ^i 6 8
+}

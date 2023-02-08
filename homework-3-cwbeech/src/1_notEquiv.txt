@@ -1,0 +1,41 @@
+//Homework 3
+//1_notEquiv.txt
+
+Show that the statements:
+
+    p ∧ q → r
+
+and
+
+    (p → r) ∧ (q → r)
+
+are NOT logically equivalent by finding ONE truth assignment
+where the two statements have different outputs.
+p ∧ q → r
+p q r
+T T T | T
+T T F | F
+T F T | F
+T F F | T
+F T T | F
+F T F | T
+F F T | F
+F F F | T
+(p → r) ∧ (q → r)
+T T T | T
+T T F | F
+T F T | F
+T F F | F
+F T T | F
+F T F | F
+F F T | F
+F F F | T
+
+They differ because "(p → r) ∧ (q → r)" is only true if "T T T" or "F F F", while "p ∧ q → r" can also be true if p XOR q is true and r is false.
+
+Afterward, explain why this tells you that the two statements
+are not equivalent. What would you expect to happen differently if both
+statements were equivalent?
+
+We know they are not equivalent because they both have different cases
+where they are true. If both statements were equivalent they would need to share the same results.

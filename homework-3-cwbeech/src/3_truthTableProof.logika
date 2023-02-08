@@ -1,0 +1,99 @@
+//Homework 3
+//3_truthTableProof.logika
+
+/*
+Suppose we have a logical argument with the following premises and conclusion:
+
+    Premises: p ∨ ¬q, r → q, r ∨ q
+    Conclusion: p ∧ q
+
+Use truth tables to prove that the argument is valid. You may want to
+include more than one truth table. If so, put all the truth tables in
+this file -- you can check if one is correct by commenting the other one out.
+Each one should be "Logika verified" in this way.
+
+After your truth table(s), write a brief explanation of why you know
+from your truth tables that the argument is valid.
+(Comment out your explanation to avoid Logika errors.)
+
+Hint: you may want to list the variables p, q, and r in all your truth tables,
+even if not all variables are included in the current statement.
+This will make it easier to compare across multiple truth tables.
+
+          *
+-------------------
+p q r | p ∨ ¬q
+-------------------
+T T T |   T F
+T T F |   T F
+T F T |   T T
+T F F |   T T
+F T T |   F F
+F T F |   F F
+F F T |   T T
+F F F |   T T
+-------------------
+Contingent
+-T: [T T T] [T T F] [T F T] [T F F] [F F T] [F F F]
+-F: [F T T] [F T F]
+
+          *
+------------------
+p q r | r → q
+------------------
+T T T |   T
+T T F |   T
+T F T |   F
+T F F |   T
+F T T |   T
+F T F |   T
+F F T |   F
+F F F |   T
+------------------
+Contingent
+-T: [T T T] [T T F] [T F F] [F T T] [F T F] [F F F]
+-F: [T F T] [F F T]
+
+          *
+------------------
+p q r | r ∨ q
+------------------
+T T T |   T
+T T F |   T
+T F T |   T
+T F F |   F
+F T T |   T
+F T F |   T
+F F T |   T
+F F F |   F
+------------------
+Contingent
+-T: [T T T] [T T F] [T F T] [F T T] [F T F] [F F T]
+-F: [T F F] [F F F]
+
+          *
+------------------
+p q r | p ∧ q
+------------------
+T T T |   T
+T T F |   T
+T F T |   F
+T F F |   F
+F T T |   F
+F T F |   F
+F F T |   F
+F F F |   F
+------------------
+Contingent
+-T: [T T T] [ T T F]
+-F: [T F T] [T F F] [ F T T] [F T F] [F F T] [F F F]
+
+Premises are true when:
+1) [T F T] [T F F] [F F T] [F F F]
+2) [T F F] [F T T] [F T F] [F F F]
+3) [T F T] [F T T] [F T F] [F F T]
+All true when:
+[T T T] [T T F]
+Therefore
+The conclusion is valid. We know this because all arguments are true and equal to the conclusion's arguments.
+*/

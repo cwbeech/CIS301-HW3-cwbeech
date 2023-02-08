@@ -1,0 +1,27 @@
+//Homework 3
+//7_deductionD.logika
+
+//Prove the following sequent using natural deduction.
+//When you are finished, your file should say "Logika verified".
+
+(a ∧ b) ∨ (b ∧ c) ⊢ (c ∨ a) ∧ b
+{
+    1. (a ∧ b) ∨ (b ∧ c)            premise
+    2. { //prove c V a
+        3. a ^ b                    assume
+        4. a                        ^e1 3
+        5. b                        ^e2 3
+        6. c V a                    Vi2 4
+        62. (c V a) ^ b             ^i 6 5
+    }
+    7. { //prove c V a
+        8. b ^ c                    assume
+        9. b                        ^e1 8
+        10. c                       ^e2 8
+        11. c V a                   Vi1 10
+        112. (c V a) ^ b            ^i 11 9
+    }
+    12. (c V a) ^ b                 Ve 1 2 7
+
+
+}

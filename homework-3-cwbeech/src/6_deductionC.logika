@@ -1,0 +1,29 @@
+//Homework 3
+//6_deductionC.logika
+
+//Prove the following sequent using natural deduction.
+//When you are finished, your file should say "Logika verified".
+
+p ∨ q ∨ r ⊢ r ∨ q ∨ p
+{
+    1. p V q V r                premise
+    2. { //prove q ∨ p
+        3. p V q                assume
+        4. { //prove with p
+            5. p                assume
+            6. r ∨ q ∨ p        Vi2 5
+        }
+        7. { //prove with q
+            8. q                assume
+            9. r V q            Vi2 8
+            10. r V q V p       Vi1 9
+        }
+        11. r V q V p           Ve 3 4 7
+    }
+    12. {
+        13. r                   assume
+        14. r V q               Vi1 13
+        15. r V q V p           Vi1 14
+    }
+    16. r V q V p               Ve 1 2 12
+}

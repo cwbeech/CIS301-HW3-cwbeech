@@ -1,0 +1,84 @@
+//Homework 3
+//2_valid.txt
+
+Consider these propositional atoms:
+
+p: It is hot
+q: I go swimming
+r: It is summer
+s: I sleep in
+
+//////////////
+
+Part 1:
+
+    Premise: r → s
+    Conclusion: s → r
+
+a) Translate each premise and the conclusion to English using the propositional atoms above.
+
+    Premise: If it is hot, then i sleep in.
+    Conclusion: If I sleep in, then it is summer.
+
+
+b) If the argument is valid, write "valid". If the argument is NOT valid,
+    write "not valid" and include a truth assignment that is a counterexample.
+    (You do not need to complete a full truth table.)
+
+    Not valid, most people sleep in on the weekends year-round. Being hot and
+    being summer are not mutually exclusive but still don't perfectly correlate.
+
+
+//////////////
+
+Part 2:
+
+    Premises: p → q, r → q
+    Conclusion: (p ∧ r) → q
+
+
+a) Translate each premise and the conclusion to English using the propositional atoms above.
+    Premise: If its hot, I go swimming, If its summer, I go swimming.
+    Conclusion: If its hot AND it's summer, then I go swimming.
+
+
+
+
+
+
+
+b) If the argument is valid, write "valid". If the argument is NOT valid,
+    write "not valid" and include a truth assignment that is a counterexample.
+    (You do not need to complete a full truth table.)
+
+    not valid. It can be hot without being summer and I will still go swimming, and vise versa.
+
+
+
+
+
+//////////////
+
+p: It is hot
+q: I go swimming
+r: It is summer
+s: I sleep in
+
+
+Part 3:
+
+    Premises: r ∨ s → p, ¬p
+    Conclusion: ¬(r ∧ s)
+
+
+a) Translate each premise and the conclusion to English using the propositional atoms above.
+    Conclusion: It is not summer nor am i sleeping in.
+    Premise: If it's summer OR I sleep in, then it is hot. It isn't hot.
+
+
+
+b) If the argument is valid, write "valid". If the argument is NOT valid,
+    write "not valid" and include a truth assignment that is a counterexample.
+    (You do not need to complete a full truth table.)
+
+Valid.
